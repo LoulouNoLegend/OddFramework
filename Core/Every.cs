@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OddFramework
+namespace OddFramework.Core
 {
     public class Every
     {

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using MelonLoader;
+using Microsoft.VisualBasic;
+using OddFramework.Core;
+using System.Reflection;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace OddFramework.Features
@@ -22,8 +26,8 @@ namespace OddFramework.Features
             if (!_show) return;
 
             UI.Panel(new Rect(10, 10, 420, 120), () => {
-                GUI.Label(new Rect(10, 10, 400, 20), "OddFramework");
-                GUI.Label(new Rect(10, 32, 400, 20), "F8: toggle");
+                GUI.Label(new Rect(10, 10, 400, 20), "OddFramework " + OddFrameworkMod.Instance.modVersion);
+                GUI.Label(new Rect(10, 32, 400, 20), "F8: toggle this menu");
             });
         }
     }

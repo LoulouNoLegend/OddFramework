@@ -1,9 +1,12 @@
-﻿using MelonLoader;
+﻿using Il2Cpp;
+using MelonLoader;
 using MelonLoader.Utils;
+using OddFramework.Core;
 using System.Collections.Generic;
 using System.IO;
+using static MelonLoader.Modules.MelonModule;
 
-[assembly: MelonInfo(typeof(OddFramework.OddFrameworkMod), "OddFramework", "1.0.0", "LoulouNoLegend")]
+[assembly: MelonInfo(typeof(OddFramework.OddFrameworkMod), "OddFramework", "0.0.2", "LoulouNoLegend")]
 
 namespace OddFramework
 {
@@ -11,14 +14,20 @@ namespace OddFramework
     {
         bool testConfigFile = false;
 
+        public static OddFrameworkMod Instance { get; private set; }
+        public string modVersion;
+
         private readonly List<InFeature> _features = new()
         {
-            new Features.CheaterModeEnforcer(),
+            //new Features.CheaterModeEnforcer(),
             new Features.OverlayFeature(),
         };
 
         public override void OnInitializeMelon()
         {
+            Instance = this;
+            modVersion = Info.Version;
+
             Log.Info("Loaded.");
             foreach (var f in _features) f.Init();
 

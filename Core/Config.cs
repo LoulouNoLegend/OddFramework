@@ -1,6 +1,6 @@
 ﻿using MelonLoader.Utils;
 
-namespace OddFramework
+namespace OddFramework.Core
 {
     internal class Config
     {

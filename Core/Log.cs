@@ -1,6 +1,6 @@
 ﻿using MelonLoader;
 
-namespace OddFramework
+namespace OddFramework.Core
 {
     public static class Log
     {

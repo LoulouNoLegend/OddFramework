@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using OddFramework.Core;
+using UnityEngine;
 
 // Can prevent cheating in leaderboards if there's run modifiers mods to cheat
 

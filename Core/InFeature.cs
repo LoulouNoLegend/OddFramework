@@ -1,4 +1,4 @@
-﻿namespace OddFramework
+﻿namespace OddFramework.Core
 {
     public interface InFeature
     {
