@@ -39,10 +39,12 @@ namespace OddFramework.Features
                 });
 
                 Log.Info("Discord Initialized.");
-            }
+                OddFrameworkMod.Instance.discordRpcState = "Working";
+            }   
             catch (Exception e)
             {
                 Log.Error($"Discord failed to start: {e.Message}");
+                OddFrameworkMod.Instance.discordRpcState = "Error";
             }
         }
 

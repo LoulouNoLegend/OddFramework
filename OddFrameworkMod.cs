@@ -1,9 +1,11 @@
 ﻿using Il2Cpp;
 using MelonLoader;
 using MelonLoader.Utils;
+using OddFramework;
 using OddFramework.Core;
 using System.Collections.Generic;
 using System.IO;
+
 using static MelonLoader.Modules.MelonModule;
 
 [assembly: MelonInfo(typeof(OddFramework.OddFrameworkMod), "OddFramework", "0.0.2", "LoulouNoLegend")]
@@ -16,6 +18,8 @@ namespace OddFramework
 
         public static OddFrameworkMod Instance { get; private set; }
         public string modVersion;
+
+        public string discordRpcState;
 
         private readonly List<InFeature> _features = new()
         {
