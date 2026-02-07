@@ -1,16 +1,11 @@
-﻿using Discord;
-using OddFramework.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OddFramework.Core;
 
 namespace OddFramework.Features
 {
     internal class DiscordRPC : InFeature
     {
         private Discord.Discord discord;
+        private Discord.ActivityManager.UpdateActivityHandler _activityHandler;
 
         public void Init() {
             Log.Info("Discord Initialisation...");
@@ -33,10 +28,11 @@ namespace OddFramework.Features
                     }
                 };
 
-                // 3. You must actually call UpdateActivity to show the status
-                discord.GetActivityManager().UpdateActivity(activity, (result) => {
+                _activityHandler = (result) => {
                     Log.Info($"Discord Activity update: {result}");
-                });
+                };
+
+                discord.GetActivityManager().UpdateActivity(activity, _activityHandler);
 
                 Log.Info("Discord Initialized.");
                 OddFrameworkMod.Instance.discordRpcState = "Working";
@@ -63,6 +59,7 @@ namespace OddFramework.Features
 
         public void Shutdown() {
             discord?.Dispose();
+            _activityHandler = null;
         }
     }
 }
