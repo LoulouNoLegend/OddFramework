@@ -21,6 +21,7 @@ namespace OddFramework
         {
             //new Features.CheaterModeEnforcer(),
             new Features.OverlayFeature(),
+            new Features.DiscordRPC(),
         };
 
         public override void OnInitializeMelon()
