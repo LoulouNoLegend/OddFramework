@@ -1,12 +1,5 @@
-﻿using Il2Cpp;
-using MelonLoader;
-using MelonLoader.Utils;
-using OddFramework;
+﻿using MelonLoader;
 using OddFramework.Core;
-using System.Collections.Generic;
-using System.IO;
-
-using static MelonLoader.Modules.MelonModule;
 
 [assembly: MelonInfo(typeof(OddFramework.OddFrameworkMod), "OddFramework", "0.0.2", "LoulouNoLegend")]
 

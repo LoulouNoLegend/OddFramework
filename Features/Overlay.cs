@@ -1,7 +1,4 @@
-﻿using MelonLoader;
-using Microsoft.VisualBasic;
-using OddFramework.Core;
-using System.Reflection;
+﻿using OddFramework.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
