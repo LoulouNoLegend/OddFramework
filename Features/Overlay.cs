@@ -26,9 +26,9 @@ namespace OddFramework.Features
             if (!_show) return;
 
             UI.Panel(new Rect(10, 10, 420, 120), () => {
-                GUI.Label(new Rect(10, 10, 400, 20), "OddFramework " + OddFrameworkMod.Instance.modVersion);
-                GUI.Label(new Rect(10, 32, 400, 20), "DiscordRPC: " + OddFrameworkMod.Instance.discordRpcState);
-                GUI.Label(new Rect(10, 52, 400, 20), "F8: toggle this menu");
+                GUI.Label(new Rect(10, 10, 500, 40), "OddFramework " + OddFrameworkMod.Instance.modVersion);
+                GUI.Label(new Rect(10, 52, 400, 20), "DiscordRPC: " + OddFrameworkMod.Instance.discordRpcState);
+                GUI.Label(new Rect(10, 74, 400, 20), "F8: toggle this menu");
             });
         }
     }
