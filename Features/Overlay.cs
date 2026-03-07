@@ -58,7 +58,7 @@ namespace OddFramework.Features
                 GUI.Label(new Rect(10, 88, 400, 20), "F8: toggle this menu", _toggleLineStyle);
                 _totalPanelHeight += 30;
 
-                _panelSavedHeight = _totalPanelHeight + 20;
+                _panelSavedHeight = _totalPanelHeight + 10;
             });
         }
     }

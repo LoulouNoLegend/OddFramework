@@ -32,7 +32,7 @@ namespace OddFramework.Features
                 };
 
                 _activityHandler = (result) => {
-                    Log.Info($"Discord Activity update: {result}");
+                    Log.Info($"Discord Activity updated (Result: {result})");
                 };
 
                 discord.GetActivityManager().UpdateActivity(activity, _activityHandler);
