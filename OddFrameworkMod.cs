@@ -1,7 +1,8 @@
 ﻿using MelonLoader;
 using OddFramework.Core;
+using OddFramework.Features;
 
-[assembly: MelonInfo(typeof(OddFramework.OddFrameworkMod), "OddFramework", "0.0.2", "LoulouNoLegend")]
+[assembly: MelonInfo(typeof(OddFramework.OddFrameworkMod), "OddFramework", "0.0.3", "LoulouNoLegend")]
 
 namespace OddFramework
 {
